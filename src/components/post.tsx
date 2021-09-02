@@ -1,29 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
-import CardHeader from '@material-ui/core/CardHeader'
-import CardMedia from '@material-ui/core/CardMedia'
-import CardContent from '@material-ui/core/CardContent'
-import CardActions from '@material-ui/core/CardActions'
-import Avatar from '@material-ui/core/Avatar'
-import IconButton from '@material-ui/core/IconButton'
-import Typography from '@material-ui/core/Typography'
-import Icon from 'react-native-vector-icons/Ionicons'
-const useStyles = makeStyles({
-    root: {
-        width: '100%'
-    },
-    media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
-    },
-    more: {
-        marginLeft: 'auto'
-    }
-})
-
-export default function RecipeReviewCard() {
-    const classes = useStyles();
+import {Avatar, Button, Heading, HStack, Icon, Stack, Text, VStack} from 'native-base'
+import splash from '../../assets/images/splash.png'
+export default function Post() {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
@@ -31,42 +9,34 @@ export default function RecipeReviewCard() {
     };
 
     return (
-        <Card className={classes.root}>
-            <CardHeader
-                avatar={<Avatar>R</Avatar>}
-                action={
-                    <IconButton aria-label="settings">
-                        <Icon name="reorder-three-outline" />
-                    </IconButton>
-                }
-                title="Con cho Thang"
-                subheader="1m"
-            />
-            <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    This impressive paella is a perfect party dish and a fun meal to cook together with your
-                    guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                </Typography>
-            </CardContent>
-            <CardMedia
-                className={classes.media}
-                image="https://randomwordgenerator.com/img/picture-generator/53e5dd464853ac14f1dc8460962e33791c3ad6e04e507749742d7cd0964fc2_640.jpg"
-                title="Image"
-            />
-            <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                    <Icon name="thumbs-up-outline"/>
-                </IconButton>
-                <IconButton aria-label="share">
-                    <Icon name="heart-outline"/>
-                </IconButton>
-                <IconButton
-                    className={classes.more}
-                    onClick={handleExpandClick}
-                >
-                    <Icon name="reorder-three-outline" />
-                </IconButton>
-            </CardActions>            
-        </Card>
+        <Stack mt={5}>
+            <HStack alignItems='center' p={2} space={2}>
+                <Avatar source={splash}/>
+                <VStack flex={1}>
+                    <Heading>
+                        Nguyen Anh
+                    </Heading>
+                    <HStack>
+                        <Text>1h ago</Text>
+                        <Text>private</Text>
+                    </HStack>
+                </VStack>
+            </HStack>
+            <Text p={2}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic culpa natus recusandae, quo iure reiciendis laborum, praesentium 
+                possimus, cumque mollitia ex deleniti ipsam blanditiis voluptate nobis odio maiores eos provident?
+            </Text>
+            <HStack space={2} p={2}>
+                <Button flex={1} size='xs'>
+                    <Text>Like</Text>
+                </Button>
+                <Button flex={1} size='xs'>
+                    <Text>Comment</Text>
+                </Button>
+                <Button flex={1} size='xs'>
+                    <Text>Share</Text>
+                </Button>
+            </HStack>
+        </Stack>
     );
 }

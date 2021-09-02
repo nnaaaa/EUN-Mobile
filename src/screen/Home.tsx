@@ -12,12 +12,13 @@ import Status from "../components/status";
 import Post from '../components/post'
 function Home() {
   return (
-    <SafeAreaView>
-      <Header>
+    <View>
+      
+      {/* {/* <Header>
         <View>
           <Text style={styles.logo}>facebook</Text>
         </View>
-      </Header>
+      </Header> */}
       <View>
         <Status />
         <Post />
@@ -26,8 +27,8 @@ function Home() {
         <Post />
         <Post />
         <Post /> 
-      </View>
-    </SafeAreaView>
+      </View> 
+    </View>
   );
 }
 

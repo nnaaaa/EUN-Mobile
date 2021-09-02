@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { InputBase, Divider, Avatar } from "@material-ui/core";
 import Theme, { Color } from "../styles/index";
 import Icon from "react-native-vector-icons/Ionicons";
+import { Avatar, Divider, Input } from "native-base";
 
 export default function Status() {
   return (
@@ -11,14 +11,14 @@ export default function Status() {
         <View style={{marginRight:10}}>
           <Avatar>A</Avatar>
         </View>
-        <InputBase placeholder="Bạn đang nghĩ gì?" color="primary" />
+        <Input placeholder="Bạn đang nghĩ gì?" color="primary" />
       </View>
       <View style={styles.buttonGroup}>
         <TouchableOpacity style={styles.button}>
           <Icon name="videocam-outline" style={Theme.icon} />
           <Text style={Theme.text}>Phát trực tiếp</Text>
         </TouchableOpacity>
-        <Divider orientation="vertical" />
+        <Divider/>
         <TouchableOpacity style={styles.button}>
           <Icon name="images-outline" style={Theme.icon} />
           <Text style={Theme.text}>Ảnh</Text>
