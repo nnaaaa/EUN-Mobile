@@ -6,10 +6,11 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
-import Theme,{Color} from "../styles/index";
+import Theme, { Color } from "../styles/index";
 import Header from "../components/header";
 import Status from "../components/status";
 import Post from '../components/post'
+import { ScrollView } from "react-native-gesture-handler";
 function Home() {
   return (
     <SafeAreaView>
@@ -18,7 +19,7 @@ function Home() {
           <Text style={styles.logo}>facebook</Text>
         </View>
       </Header>
-      <View>
+      <ScrollView>
         <Status />
         <Post />
         <Post />
@@ -26,7 +27,7 @@ function Home() {
         <Post />
         <Post />
         <Post /> 
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }

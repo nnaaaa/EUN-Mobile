@@ -36,7 +36,7 @@ export default function RecipeReviewCard() {
                 avatar={<Avatar>R</Avatar>}
                 action={
                     <IconButton aria-label="settings">
-                        <Icon name="reorder-three-outline" />
+                        <Icon name="reorder-three-outline" size={30}/>
                     </IconButton>
                 }
                 title="Con cho Thang"
@@ -55,10 +55,10 @@ export default function RecipeReviewCard() {
             />
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
-                    <Icon name="thumbs-up-outline"/>
+                    <Icon name="thumbs-up-outline" size={20}/>
                 </IconButton>
                 <IconButton aria-label="share">
-                    <Icon name="heart-outline"/>
+                    <Icon name="heart-outline" size={20}/>
                 </IconButton>
                 <IconButton
                     className={classes.more}
