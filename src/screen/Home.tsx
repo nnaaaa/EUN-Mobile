@@ -13,13 +13,14 @@ import Post from '../components/post'
 import { ScrollView } from "react-native-gesture-handler";
 function Home() {
   return (
-    <SafeAreaView>
-      <Header>
+    <View>
+      
+      {/* {/* <Header>
         <View>
           <Text style={styles.logo}>facebook</Text>
         </View>
-      </Header>
-      <ScrollView>
+      </Header> */}
+      <View>
         <Status />
         <Post />
         <Post />
@@ -27,8 +28,8 @@ function Home() {
         <Post />
         <Post />
         <Post /> 
-      </ScrollView>
-    </SafeAreaView>
+      </View> 
+    </View>
   );
 }
 
