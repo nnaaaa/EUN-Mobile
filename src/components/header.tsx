@@ -12,7 +12,6 @@ export default function Header({children}:{children:ReactNode}) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor:'#fff',
         flexDirection:'row',
         justifyContent: 'space-between',
         alignItems:'center',

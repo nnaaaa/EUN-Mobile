@@ -1,11 +1,11 @@
-import {configureStore} from '@reduxjs/toolkit'
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { getDefaultWatermarks } from 'istanbul-lib-report'
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from './rootSaga'
 
-const rootReducer = {
+const rootReducer = combineReducers({
 
-}
+})
 
 const sagaMiddleware = createSagaMiddleware()
 
