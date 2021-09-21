@@ -27,7 +27,7 @@ export default function Post() {
                 possimus, cumque mollitia ex deleniti ipsam blanditiis voluptate nobis odio maiores eos provident?
             </Text>
             <HStack space={2} p={2}>
-                <Button flex={1} size='xs'>
+                <Button flex={1} size='xs' bg='transparent'>
                     <Text>Like</Text>
                 </Button>
                 <Button flex={1} size='xs'>
